@@ -32,11 +32,13 @@
 		<p>Para ser eficiente, si los archivos no se han modificado Git no almacena el archivo de nuevo, sino un enlace al archivo anterior idéntico que ya tiene almacenado.
 		Git maneja sus datos como una secuencia de copias instantáneas.</p>
 		<h3> Configuracion de Git </h3>
-		<p> Aqui tienes algunos comandos para la configuración de Git en tu consola </p>
-		<pre> </pre>
-		<pre> </pre>
-		<pre> </pre>
-		<pre> </pre>
+		<ul>
+			<li><b>git config</b> puede ser usado para establecer una configuración específica de usuario, como el email, nombre de usuario y tipo de formato, etc. Por ejemplo, el siguiente comando se usa para establecer un email:</li>
+		</ul>
+		<pre>git config --global user.name "Nombre de usuario" </pre>
+		<pre>git config --global user.password "Contraseña" </pre>
+		<pre>git config --global user.email tuemail@ejemplo.com </pre>
+		<pre>git config --global core.editor notepad </pre> 
 		<h3> Comandos basicos de Git </h3>
 		<p>Aquí hay algunos comandos básicos de GIT que debes conocer:</p>
 		<ul>
@@ -59,10 +61,6 @@
 			<li><b>git commit</b> creará una instantánea de los cambios y la guardará en el directorio git.</li>
 		</ul>
 		<pre>git commit –m "El mensaje que acompaña al commit va aquí"</pre>
-		<ul>
-			<li><b>git config</b> puede ser usado para establecer una configuración específica de usuario, como el email, nombre de usuario y tipo de formato, etc. Por ejemplo, el siguiente comando se usa para establecer un email:</li>
-		</ul>
-		<pre>git config --global user.email tuemail@ejemplo.com</pre>
 		<ul>
 			<li><b>git status</b> muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados.</li>
 		</ul>
