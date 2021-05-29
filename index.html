@@ -20,8 +20,14 @@
 		Cada una de estas copias constituye una copia completa de todo el contenido del repositorio, por lo que no es necesario estar conectado a la red para trabajar. Además, estos archivos sirven como copia de seguridad en caso de que el repositorio principal falle o resulte dañado. 
 		Los cambios en los archivos pueden intercambiarse con todos los demás participantes del proyecto en cualquier momento y, si corresponde, añadirse al repositorio.</p>
 		<h3> ¿Como funciona Git? </h3>
-		<p> </p>
-		<p> </p>
+		<p>Git almacena y maneja la información de forma muy diferente a otros sistemas como Subversion y Perforce.</p>
+		<p>La principal diferencia entre Git y cualquier otro VCS (Version Control System) es la forma en la que manejan sus datos.
+		La mayoría de los otros sistemas almacenan la información como una lista de cambios en los archivos.
+		Estos sistemas manejan la información que almacenan como un conjunto de archivos y las modificaciones hechas a cada uno de ellos a través del tiempo.</p>
+		<p>Git no maneja ni almacena sus datos de esta forma. Git maneja sus datos como un conjunto de copias instantáneas de un sistema de archivos miniatura.
+		Cada vez que confirmamos un cambio, o guardamos el estado de nuestro proyecto en Git, él básicamente toma una foto del aspecto de todos los archivos en ese momento y guarda una referencia a esa copia instantánea.</p>
+		<p>Para ser eficiente, si los archivos no se han modificado Git no almacena el archivo de nuevo, sino un enlace al archivo anterior idéntico que ya tiene almacenado.
+		Git maneja sus datos como una secuencia de copias instantáneas.</p>
 		<h3> Comandos basicos de Git </h3>
 		<p> </p>
 		<p> </p>
