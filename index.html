@@ -9,170 +9,177 @@
 
 	</header>
 	<nav>
+		<a href="#inicio"> Inicio </a>
 		<a href="#Git"> Git Tutorial </a>
 		<a href="#GitHub"> GitHub Tutorial </a>
 		<a href="#VisualStudio"> Git vs Visual Studio Tutorial </a>
 	</nav>
-	<section class="section1">
-		<h1> <a id="Git"> ¿Que es Git?  </a> </h1>
-		<p>Git es un sistema de control de versiones desarrollado en 2005 por Linus Thorvalds, el creador de Linux. Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que podamos recuperar versiones específicas más adelante.</p>
-		<p>La particularidad de esta herramienta es que, aunque guarda un repositorio central para cada proyecto, todos los participantes descargan una copia local del mismo en su propio dispositivo.
-		Cada una de estas copias constituye una copia completa de todo el contenido del repositorio, por lo que no es necesario estar conectado a la red para trabajar. Además, estos archivos sirven como copia de seguridad en caso de que el repositorio principal falle o resulte dañado. 
-		Los cambios en los archivos pueden intercambiarse con todos los demás participantes del proyecto en cualquier momento y, si corresponde, añadirse al repositorio.</p>
-		<h3> ¿Como funciona Git? </h3>
-		<p>GIT es el SCV (sistema de control de versiones) de código abierto más utilizado que te permite rastrear los cambios realizados en los archivos. Las empresas y los programadores suelen utilizar el GIT para colaborar en el desarrollo de software y aplicaciones.</p>
-		<p>Un proyecto GIT consta de tres secciones principales: el directorio de trabajo, el área de preparación y el directorio git.</p>
-		<p>El directorio de trabajo es donde se agregan, borran y editan los archivos. Luego, los cambios son preparados (indexados) en el área de preparación. 
-		Después de que confirmes tus cambios, la instantánea de los cambios se guardará en el directorio git.</p>
-		<p>La principal diferencia entre Git y cualquier otro SCV como Subversion o Perforce es la forma en la que manejan sus datos. 
-		La mayoría de los otros sistemas almacenan la información como una lista de cambios en los archivos.
-		Estos sistemas manejan la información que almacenan como un conjunto de archivos y las modificaciones hechas a cada uno de ellos a través del tiempo.</p>
-		<p>Git no maneja ni almacena sus datos de esta forma. Git maneja sus datos como un conjunto de copias instantáneas de un sistema de archivos miniatura.
-		Cada vez que confirmamos un cambio, o guardamos el estado de nuestro proyecto en Git, él básicamente toma una foto del aspecto de todos los archivos en ese momento y guarda una referencia a esa copia instantánea.</p>
-		<p>Para ser eficiente, si los archivos no se han modificado Git no almacena el archivo de nuevo, sino un enlace al archivo anterior idéntico que ya tiene almacenado.
-		Git maneja sus datos como una secuencia de copias instantáneas.</p>
-		<h3> Configuración de Git </h3>
-		<ul>
-			<li><b>git config</b> puede ser usado para establecer una configuración específica de usuario, como el email, nombre de usuario y tipo de formato, etc. Por ejemplo, los siguientes comandos se usan para establecer un usuario, contraseña, email y aplicacion para editar los archivos:</li>
-		</ul>
-		<pre>git config --global user.name "Nombre de usuario" </pre>
-		<pre>git config --global user.password "Contraseña" </pre>
-		<pre>git config --global user.email tuemail@ejemplo.com </pre>
-		<pre>git config --global core.editor notepad </pre> 
-		<h3> Comandos basicos de Git </h3>
-		<p>Aquí hay algunos comandos básicos de GIT que debes conocer:</p>
-		<ul>
-			<li><b>git init</b> creará un nuevo repositorio local GIT. El siguiente comando de Git creará un repositorio en el directorio actual:</li>
-		</ul>
-		<pre>git init</pre>
-		<ul>
-			<li><b>git clone</b> se usa para copiar un repositorio. Si el repositorio está en un servidor remoto, usa:</li>
-		</ul>
-		<pre>git clone nombredeusuario@host:/path/to/repository</pre>
-		<ul>
-			<li>A la inversa, ejecuta el siguiente comando básico para copiar un repositorio local:</li>
-		</ul>
-		<pre>git clone /path/to/repository</pre>
-		<ul>
-			<li><b>git add</b> se usa para agregar archivos al área de preparación. Por ejemplo, el siguiente comando de Git básico indexará el archivo temp.txt:</li>
-		</ul>
-		<pre>git add temp.txt</pre>
-		<ul>
-			<li><b>git commit</b> creará una instantánea de los cambios y la guardará en el directorio git.</li>
-		</ul>
-		<pre>git commit –m "El mensaje que acompaña al commit va aquí"</pre>
-		<ul>
-			<li><b>git status</b> muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados.</li>
-		</ul>
-		<pre>git status</pre>
-		<ul>
-			<li><b>git push</b> se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto. Aquí está la estructura básica del código:</li>
-		</ul>
-		<pre>git push origin master</pre>
-		<ul>
-			<li><b>git checkout</b> crea ramas y te ayuda a navegar entre ellas. Por ejemplo, el siguiente comando crea una nueva y automáticamente se cambia a ella:</li>
-		</ul>
-		<pre>git checkout -b branch-name</pre>
-		<ul>
-			<li><b>git remote</b> te permite ver todos los repositorios remotos. El siguiente comando listará todas las conexiones junto con sus URLs:</li>
-		</ul>
-		<pre>git remote -v</pre>
-		<ul>
-			<li><b>git branch</b> se usa para listar, crear o borrar ramas. Por ejemplo, si quieres listar todas las ramas presentes en el repositorio, el comando debería verse así:</li>
-		</ul>
-		<pre>git branch</pre>
-		<ul>
-			<li>Si quieres borrar una rama, usa:</li>
-		</ul>
-		<pre>git branch -d branch-name</pre>
-		<ul>
-			<li><b>git merge</b> se usa para fusionar una rama con otra rama activa:</li>
-		</ul>
-		<pre>git merge branch-name</pre>
-		<ul>
-			<li><b>git diff</b> se usa para hacer una lista de conflictos. Para poder ver conflictos con respecto al archivo base, usa:</li>
-		</ul>
-		<pre>git diff --base file-name</pre>
-		<ul>
-			<li>Para ver una lista de todos los conflictos presentes usa:</li>
-		</ul>
-		<pre>git diff</pre>
-		<ul>
-			<li><b>git log</b> se usa para ver el historial del repositorio listando ciertos detalles de la confirmación. Al ejecutar el comando se obtiene una salida como ésta:</li>
-		</ul>
-		<pre>commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw
-Author: Pepinillo18 &lt;pepinillo18@gmail.com&gt; 
-Date: &nbsp; Mon May 24 12:56:29 2021 -0600</pre>
-		<ul>
-			<li><b>git reset</b> sirve para resetear el index y el directorio de trabajo al último estado de confirmación.</li>
-		</ul>
-		<pre>git reset --hard HEAD</pre>
-		<ul>
-			<li><b>git rm</b> se puede usar para remover archivos del index y del directorio de trabajo.</li>
-		</ul>
-		<pre>git rm filename.txt</pre>
-		<ul>
-			<li><b>git stash</b> guardará momentáneamente los cambios que no están listos para ser confirmados. De esta manera, pudes volver al proyecto más tarde.</li>
-		</ul>
-		<pre>git stash</pre>
-		<ul>
-			<li><b>git show</b> se usa para mostrar información sobre cualquier objeto git.</li>
-		</ul>
-		<pre>git show</pre>
-	</section>
-	<section class="section2">
-		<h1> <a id="GitHub"> ¿Que es GitHub?  </a> </h1>
-		<p>GitHub es un portal creado para alojar proyectos utilizando el sistema de control de versiones Git.
-		Un gran porcentaje de los repositorios Git se almacenan en GitHub, y muchos proyectos de código abierto lo utilizan para hospedar su Git, realizar seguimientos de fallos, hacer revisiones de código, etc.</p>
-		<h3> ¿Como funciona GitHub? </h3>
-		<p>En GitHub puedes contribuir a mejorar el software de los demás. Para poder alcanzar esta meta, provee de funcionalidades para hacer un fork y solicitar pulls.</p>
-		<p>Realizar un fork es simplemente clonar un repositorio ajeno para eliminar algún bug o modificar cosas de él. Una vez realizadas tus modificaciones puedes enviar un pull al dueño del proyecto.
-		Éste podrá analizar los cambios que has realizado fácilmente, y si considera interesante tu contribución, adjuntarlo con el repositorio original.</p>
-		<h3> Crear un repositorio </h3>
-		<p>Vamos a ver como crear un nuevo repositorio para compartir nuestro código en él.
-		Primero, pulsa el botón “New repository” en la parte superior derecha de tu página principal.</p>
-		//imagen
-		<p>Aquí tan solo tienes que darle un nombre al proyecto ya que el resto de campos son opcionales.
-		Por ahora, pulsa en el botón “Create Repository” y listo: se habrá creado el repositorio en GitHub, con el nombre usuario/proyecto.</p>
-		<p>Dado que no tiene todavía contenido, GitHub te mostrará instrucciones para crear el repositorio Git, o para conectarlo a un proyecto Git existente.</p>
-		<p>Ahora que el proyecto está alojado en GitHub, puedes dar la URL a cualquiera con quien quieras compartirlo.
-		Cada proyecto en GitHub es accesible mediante HTTP como <b>https://github.com/usuario/proyecto</b>, y también con SSH con la dirección <b>git@github.com:usuario/proyecto</b>.</p>
-		<h3> Conectar Git y GitHub </h3>
-		<p>Unos de los comandos más usados en GitHub son los siguientes, usados para enviar archivos de un repositorio local a un repositorio en GitHub.</p>
-		<ul>
-			<li><b>git add</b> se usa para agregar archivos al área de preparación.</li>
-		</ul>
-		<pre>git add "nombrearchivo"</pre>
-		<ul>
-			<li><b>git commit</b> creará una instantánea de los cambios y la guardará en el directorio git.</li>
-		</ul>
-		<pre>git commit –m "El mensaje que acompaña al commit va aquí"</pre>
-		<ul>
-			<li><b>git push</b> se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto.</li>
-		</ul>
-		<pre>git push origin <master></pre>
-		<ul>
-			<li><b>git pull</b> fusiona todos los cambios que se han hecho en el repositorio local con el directorio de trabajo local.</li>
-		</ul>
-		<pre>git pull</pre>
-	</section>
-	<section class="section3">
-		<h1> <a id="VisualStudio"> Git vs Visual Studio </a> </h1>
-		<h3> Conectar Git y Visual Studio </h3>
-		<p> </p>
-		<p> </p>
-		<h3> Crear, Clonar y Abrir un repositorio </h3>
-		<p> </p>
-		<p> </p>
-		<h3> Crear y Administrar ramas </h3>
-		<p> </p>
-		<p> </p>
-		<h3> Commits en Visual Studio </h3>
-		<p> </p>
-		<p> </p>
-	</section>
-	<footer>
-		
-	</footer>
+	<main>
+			<div class="inicio">
+
+		</div>
+		<section class="section1">
+			<h1> <a id="Git"> ¿Que es Git?  </a> </h1>
+			<p>Git es un sistema de control de versiones desarrollado en 2005 por Linus Thorvalds, el creador de Linux. Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que podamos recuperar versiones específicas más adelante.</p>
+			<p>La particularidad de esta herramienta es que, aunque guarda un repositorio central para cada proyecto, todos los participantes descargan una copia local del mismo en su propio dispositivo.
+			Cada una de estas copias constituye una copia completa de todo el contenido del repositorio, por lo que no es necesario estar conectado a la red para trabajar. Además, estos archivos sirven como copia de seguridad en caso de que el repositorio principal falle o resulte dañado. 
+			Los cambios en los archivos pueden intercambiarse con todos los demás participantes del proyecto en cualquier momento y, si corresponde, añadirse al repositorio.</p>
+			<h3> ¿Como funciona Git? </h3>
+			<p>GIT es el SCV (sistema de control de versiones) de código abierto más utilizado que te permite rastrear los cambios realizados en los archivos. Las empresas y los programadores suelen utilizar el GIT para colaborar en el desarrollo de software y aplicaciones.</p>
+			<p>Un proyecto GIT consta de tres secciones principales: el directorio de trabajo, el área de preparación y el directorio git.</p>
+			<p>El directorio de trabajo es donde se agregan, borran y editan los archivos. Luego, los cambios son preparados (indexados) en el área de preparación. 
+			Después de que confirmes tus cambios, la instantánea de los cambios se guardará en el directorio git.</p>
+			<p>La principal diferencia entre Git y cualquier otro SCV como Subversion o Perforce es la forma en la que manejan sus datos. 
+			La mayoría de los otros sistemas almacenan la información como una lista de cambios en los archivos.
+			Estos sistemas manejan la información que almacenan como un conjunto de archivos y las modificaciones hechas a cada uno de ellos a través del tiempo.</p>
+			<p>Git no maneja ni almacena sus datos de esta forma. Git maneja sus datos como un conjunto de copias instantáneas de un sistema de archivos miniatura.
+			Cada vez que confirmamos un cambio, o guardamos el estado de nuestro proyecto en Git, él básicamente toma una foto del aspecto de todos los archivos en ese momento y guarda una referencia a esa copia instantánea.</p>
+			<p>Para ser eficiente, si los archivos no se han modificado Git no almacena el archivo de nuevo, sino un enlace al archivo anterior idéntico que ya tiene almacenado.
+			Git maneja sus datos como una secuencia de copias instantáneas.</p>
+			<h3> Configuración de Git </h3>
+			<ul>
+				<li><b>git config</b> puede ser usado para establecer una configuración específica de usuario, como el email, nombre de usuario y tipo de formato, etc. Por ejemplo, los siguientes comandos se usan para establecer un usuario, contraseña, email y aplicacion para editar los archivos:</li>
+			</ul>
+			<pre>git config --global user.name "Nombre de usuario" </pre>
+			<pre>git config --global user.password "Contraseña" </pre>
+			<pre>git config --global user.email tuemail@ejemplo.com </pre>
+			<pre>git config --global core.editor notepad </pre> 
+			<h3> Comandos basicos de Git </h3>
+			<p>Aquí hay algunos comandos básicos de GIT que debes conocer:</p>
+			<ul>
+				<li><b>git init</b> creará un nuevo repositorio local GIT. El siguiente comando de Git creará un repositorio en el directorio actual:</li>
+			</ul>
+			<pre>git init</pre>
+			<ul>
+				<li><b>git clone</b> se usa para copiar un repositorio. Si el repositorio está en un servidor remoto, usa:</li>
+			</ul>
+			<pre>git clone nombredeusuario@host:/path/to/repository</pre>
+			<ul>
+				<li>A la inversa, ejecuta el siguiente comando básico para copiar un repositorio local:</li>
+			</ul>
+			<pre>git clone /path/to/repository</pre>
+			<ul>
+				<li><b>git add</b> se usa para agregar archivos al área de preparación. Por ejemplo, el siguiente comando de Git básico indexará el archivo temp.txt:</li>
+			</ul>
+			<pre>git add temp.txt</pre>
+			<ul>
+				<li><b>git commit</b> creará una instantánea de los cambios y la guardará en el directorio git.</li>
+			</ul>
+			<pre>git commit –m "El mensaje que acompaña al commit va aquí"</pre>
+			<ul>
+				<li><b>git status</b> muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados.</li>
+			</ul>
+			<pre>git status</pre>
+			<ul>
+				<li><b>git push</b> se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto. Aquí está la estructura básica del código:</li>
+			</ul>
+			<pre>git push origin master</pre>
+			<ul>
+				<li><b>git checkout</b> crea ramas y te ayuda a navegar entre ellas. Por ejemplo, el siguiente comando crea una nueva y automáticamente se cambia a ella:</li>
+			</ul>
+			<pre>git checkout -b branch-name</pre>
+			<ul>
+				<li><b>git remote</b> te permite ver todos los repositorios remotos. El siguiente comando listará todas las conexiones junto con sus URLs:</li>
+			</ul>
+			<pre>git remote -v</pre>
+			<ul>
+				<li><b>git branch</b> se usa para listar, crear o borrar ramas. Por ejemplo, si quieres listar todas las ramas presentes en el repositorio, el comando debería verse así:</li>
+			</ul>
+			<pre>git branch</pre>
+			<ul>
+				<li>Si quieres borrar una rama, usa:</li>
+			</ul>
+			<pre>git branch -d branch-name</pre>
+			<ul>
+				<li><b>git merge</b> se usa para fusionar una rama con otra rama activa:</li>
+			</ul>
+			<pre>git merge branch-name</pre>
+			<ul>
+				<li><b>git diff</b> se usa para hacer una lista de conflictos. Para poder ver conflictos con respecto al archivo base, usa:</li>
+			</ul>
+			<pre>git diff --base file-name</pre>
+			<ul>
+				<li>Para ver una lista de todos los conflictos presentes usa:</li>
+			</ul>
+			<pre>git diff</pre>
+			<ul>
+				<li><b>git log</b> se usa para ver el historial del repositorio listando ciertos detalles de la confirmación. Al ejecutar el comando se obtiene una salida como ésta:</li>
+			</ul>
+			<pre>commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw
+	Author: Pepinillo18 &lt;pepinillo18@gmail.com&gt; 
+	Date: &nbsp; Mon May 24 12:56:29 2021 -0600</pre>
+			<ul>
+				<li><b>git reset</b> sirve para resetear el index y el directorio de trabajo al último estado de confirmación.</li>
+			</ul>
+			<pre>git reset --hard HEAD</pre>
+			<ul>
+				<li><b>git rm</b> se puede usar para remover archivos del index y del directorio de trabajo.</li>
+			</ul>
+			<pre>git rm filename.txt</pre>
+			<ul>
+				<li><b>git stash</b> guardará momentáneamente los cambios que no están listos para ser confirmados. De esta manera, pudes volver al proyecto más tarde.</li>
+			</ul>
+			<pre>git stash</pre>
+			<ul>
+				<li><b>git show</b> se usa para mostrar información sobre cualquier objeto git.</li>
+			</ul>
+			<pre>git show</pre>
+		</section>
+		<section class="section2">
+			<h1> <a id="GitHub"> ¿Que es GitHub?  </a> </h1>
+			<p>GitHub es un portal creado para alojar proyectos utilizando el sistema de control de versiones Git.
+			Un gran porcentaje de los repositorios Git se almacenan en GitHub, y muchos proyectos de código abierto lo utilizan para hospedar su Git, realizar seguimientos de fallos, hacer revisiones de código, etc.</p>
+			<h3> ¿Como funciona GitHub? </h3>
+			<p>En GitHub puedes contribuir a mejorar el software de los demás. Para poder alcanzar esta meta, provee de funcionalidades para hacer un fork y solicitar pulls.</p>
+			<p>Realizar un fork es simplemente clonar un repositorio ajeno para eliminar algún bug o modificar cosas de él. Una vez realizadas tus modificaciones puedes enviar un pull al dueño del proyecto.
+			Éste podrá analizar los cambios que has realizado fácilmente, y si considera interesante tu contribución, adjuntarlo con el repositorio original.</p>
+			<h3> Crear un repositorio </h3>
+			<p>Vamos a ver como crear un nuevo repositorio para compartir nuestro código en él.
+			Primero, pulsa el botón “New repository” en la parte superior derecha de tu página principal.</p>
+			//imagen
+			<p>Aquí tan solo tienes que darle un nombre al proyecto ya que el resto de campos son opcionales.
+			Por ahora, pulsa en el botón “Create Repository” y listo: se habrá creado el repositorio en GitHub, con el nombre usuario/proyecto.</p>
+			<p>Dado que no tiene todavía contenido, GitHub te mostrará instrucciones para crear el repositorio Git, o para conectarlo a un proyecto Git existente.</p>
+			<p>Ahora que el proyecto está alojado en GitHub, puedes dar la URL a cualquiera con quien quieras compartirlo.
+			Cada proyecto en GitHub es accesible mediante HTTP como <b>https://github.com/usuario/proyecto</b>, y también con SSH con la dirección <b>git@github.com:usuario/proyecto</b>.</p>
+			<h3> Conectar Git y GitHub </h3>
+			<p>Unos de los comandos más usados en GitHub son los siguientes, usados para enviar archivos de un repositorio local a un repositorio en GitHub.</p>
+			<ul>
+				<li><b>git add</b> se usa para agregar archivos al área de preparación.</li>
+			</ul>
+			<pre>git add "nombrearchivo"</pre>
+			<ul>
+				<li><b>git commit</b> creará una instantánea de los cambios y la guardará en el directorio git.</li>
+			</ul>
+			<pre>git commit –m "El mensaje que acompaña al commit va aquí"</pre>
+			<ul>
+				<li><b>git push</b> se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto.</li>
+			</ul>
+			<pre>git push origin <master></pre>
+			<ul>
+				<li><b>git pull</b> fusiona todos los cambios que se han hecho en el repositorio local con el directorio de trabajo local.</li>
+			</ul>
+			<pre>git pull</pre>
+		</section>
+		<section class="section3">
+			<h1> <a id="VisualStudio"> Git vs Visual Studio </a> </h1>
+			<h3> Conectar Git y Visual Studio </h3>
+			<p> </p>
+			<p> </p>
+			<h3> Crear, Clonar y Abrir un repositorio </h3>
+			<p> </p>
+			<p> </p>
+			<h3> Crear y Administrar ramas </h3>
+			<p> </p>
+			<p> </p>
+			<h3> Commits en Visual Studio </h3>
+			<p> </p>
+			<p> </p>
+		</section>
+		<footer>
+
+		</footer>
+	</main>
+	
 </body>
 </html>
