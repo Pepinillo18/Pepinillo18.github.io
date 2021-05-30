@@ -9,12 +9,10 @@
 
 	</header>
 	<nav>
-		<a href="#inicio"> Inicio </a>
 		<a href="#Git"> Git Tutorial </a>
 		<a href="#GitHub"> GitHub Tutorial </a>
 		<a href="#VisualStudio"> Git vs Visual Studio Tutorial </a>
 	</nav>
-	<div class="inicio"> </div>
 	<section class="section1">
 		<h1> <a id="Git"> ¿Que es Git?  </a> </h1>
 		<p>Git es un sistema de control de versiones desarrollado en 2005 por Linus Thorvalds, el creador de Linux. Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que podamos recuperar versiones específicas más adelante.</p>
@@ -126,18 +124,29 @@ Date: &nbsp; Mon May 24 12:56:29 2021 -0600</pre>
 		<p>En GitHub puedes contribuir a mejorar el software de los demás. Para poder alcanzar esta meta, provee de funcionalidades para hacer un fork y solicitar pulls.</p>
 		<p>Realizar un fork es simplemente clonar un repositorio ajeno para eliminar algún bug o modificar cosas de él. Una vez realizadas tus modificaciones puedes enviar un pull al dueño del proyecto.
 		Éste podrá analizar los cambios que has realizado fácilmente, y si considera interesante tu contribución, adjuntarlo con el repositorio original.</p>
-		<h3> Repositorios </h3>
+		<h3> Crear un repositorio </h3>
 		<p>Vamos a ver como crear un nuevo repositorio para compartir nuestro código en él.
 		Primero, pulsa el botón “New repository” en la parte superior derecha de tu página principal.</p>
 		//imagen
 		<p>Aquí tan solo tienes que darle un nombre al proyecto ya que el resto de campos son opcionales.
-		Por ahora, pulsa en el botón “Create Repository” y listo: se habrá creado el repositorio en GitHub, con el nombre <usuario>/<proyecto>.</p>
+		Por ahora, pulsa en el botón “Create Repository” y listo: se habrá creado el repositorio en GitHub, con el nombre usuario/proyecto.</p>
 		<p>Dado que no tiene todavía contenido, GitHub te mostrará instrucciones para crear el repositorio Git, o para conectarlo a un proyecto Git existente.</p>
 		<p>Ahora que el proyecto está alojado en GitHub, puedes dar la URL a cualquiera con quien quieras compartirlo.
-		Cada proyecto en GitHub es accesible mediante HTTP como <b>https://github.com/<usuario>/<proyecto></b>, y también con SSH con la dirección <b>git@github.com:<usuario>/<proyecto></b>.</p>
-		<h3> Git Pull y Git Push </h3>
-		<p> </p>
-		<p> </p>
+		Cada proyecto en GitHub es accesible mediante HTTP como <b>https://github.com/usuario/proyecto</b>, y también con SSH con la dirección <b>git@github.com:<usuario>/<proyecto></b>.</p>
+		<h3> Conectar Git y GitHub </h3>
+		<p>Unos de los comandos más usados en GitHub son los siguientes, usados para enviar archivos de un repositorio local a un repositorio en GitHub.</p>
+		<ul>
+			<li><b>git add</b> se usa para agregar archivos al área de preparación.</li>
+		</ul>
+		<pre>git add "nombrearchivo"</pre>
+		<ul>
+			<li><b>git commit</b> creará una instantánea de los cambios y la guardará en el directorio git.</li>
+		</ul>
+		<pre>git commit –m "El mensaje que acompaña al commit va aquí"</pre>
+		<ul>
+			<li><b>git pull</b> fusiona todos los cambios que se han hecho en el repositorio local con el directorio de trabajo local.</li>
+		</ul>
+		<pre>git pull</pre>
 	</section>
 	<section class="section3">
 		<h1> <a id="VisualStudio"> Git vs Visual Studio </a> </h1>
@@ -155,7 +164,7 @@ Date: &nbsp; Mon May 24 12:56:29 2021 -0600</pre>
 		<p> </p>
 	</section>
 	<footer>
-	
+		
 	</footer>
 </body>
 </html>
