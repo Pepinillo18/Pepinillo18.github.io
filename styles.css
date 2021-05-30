@@ -35,7 +35,7 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 10%;
+  width: 15%;
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
@@ -60,7 +60,7 @@ nav li a:hover:not(.activo) {
 }
 
 main {
-	margin-left:10%;
+	margin-left:15%;
 	padding:1px 16px;
 	height:1000px;
 }
