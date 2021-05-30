@@ -20,7 +20,7 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a.active {
+nav li a.activo {
   background-color: #00FF00;
   color: white;
 }
