@@ -2,35 +2,6 @@ header {
 	
 }
 
-section {
-	text-align: justify;
-	text-justify: inter-word;
-}
-
-
-footer {
-
-}
-
-h1 {
-	color:black;	
-}
-
-h3 {
-	color:black;	
-}
-pre {
-    white-space: pre;
-    word-wrap: normal;
-    overflow: auto!important;
-    background-color: rgba(0,0,0,.1);
-    border-radius: 3px;
-    font-size: 14px;
-    margin-bottom: 0;
-    padding: 10px 20px;
-    margin-bottom: 2.4rem;
-}
-
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -63,4 +34,33 @@ main {
 	margin-left:15%;
 	padding:1px 16px;
 	height:1000px;
+}
+
+section {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+
+footer {
+
+}
+
+h1 {
+	color:black;	
+}
+
+h3 {
+	color:black;	
+}
+pre {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto!important;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    margin-bottom: 2.4rem;
 }
