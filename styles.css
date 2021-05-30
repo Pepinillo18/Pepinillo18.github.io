@@ -12,10 +12,15 @@ nav ul {
   height: 15%;
   overflow: auto;
 }
-nav ul.imagen {
-	margin-top:15%;	
-	width:15%;
+nav ul img {
+	margin-top:8%;	
+  padding:0;
+	width:12%;
+  height: 15%;
+  position: fixed;
+  overflow: auto;
 }
+
 nav li a {
   display: block;
   color: #000;
